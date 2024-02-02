@@ -6,6 +6,7 @@ CREATE TABLE ESTUDIANTES(
 id_estudiante INT PRIMARY KEY,
 dni VARCHAR(8) NOT NULL,
 nombre VARCHAR(8) NOT NULL,
+codigo char(10)not null,
 )
 
 CREATE TABLE PENSIONES(
