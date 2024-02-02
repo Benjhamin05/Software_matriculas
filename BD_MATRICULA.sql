@@ -9,8 +9,14 @@ nombre VARCHAR(8) NOT NULL,
 )
 
 CREATE TABLE PENSIONES(
-id_PENSIONES INT PRIMARY KEY
-)
+id_PENSIONES INT PRIMARY KEY,
+monto DECIMAL(10, 2),
+fecha_pago DATE,
+estado_pago VARCHAR(20),
+id_estudiante INT,
+FOREIGN KEY (id_estudiante) REFERENCES ESTUDIANTES(id_estudiante)
+);
+
 
 CREATE TABLE MATRICULA(
 id_matricula INT PRIMARY KEY
