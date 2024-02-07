@@ -11,10 +11,12 @@ codigo char(10)not null,
 
 CREATE TABLE PENSIONES(
 id_PENSIONES INT PRIMARY KEY
+id_estudiante INT 
 )
 
 CREATE TABLE MATRICULA(
 id_matricula INT PRIMARY KEY
+id_estudiante INT 
 )
 
 CREATE TABLE FACTURA(
