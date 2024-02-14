@@ -12,12 +12,12 @@ correo			VARCHAR(100) NOT NULL
 )
 
 CREATE TABLE PENSIONES(
-id_pensiones	INT PRIMARY KEY,
-id_estudiante	INT NOT NULL,
-n_cuota			INT NOT NULL,
-monto			MONEY NOT NULL,
-fecha_vencimiento DATE NOT NULL,
-mora			MONEY NOT NULL,
+id_pensiones		INT PRIMARY KEY,
+id_estudiante		INT NOT NULL,
+n_cuota				INT NOT NULL,
+monto				MONEY NOT NULL,
+fecha_vencimiento	DATE NOT NULL,
+mora				MONEY NOT NULL,
 
 FOREIGN KEY (id_estudiante) REFERENCES ESTUDIANTES(id_estudiante)
 )
