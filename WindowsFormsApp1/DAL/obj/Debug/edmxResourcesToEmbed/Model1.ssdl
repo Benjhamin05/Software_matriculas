@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_MATRICULAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ESTUDIANTES">
+    <Key>
+      <PropertyRef Name="id_estudiante" />
+    </Key>
+    <Property Name="id_estudiante" Type="int" Nullable="false" />
+    <Property Name="dni" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="nombres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="codigo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="correo" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FACTURA">
+    <Key>
+      <PropertyRef Name="id_factura" />
+    </Key>
+    <Property Name="id_factura" Type="int" Nullable="false" />
+    <Property Name="id_estudiante" Type="int" Nullable="false" />
+    <Property Name="fecha_emision" Type="date" Nullable="false" />
+    <Property Name="mora" Type="money" Nullable="false" />
+    <Property Name="monto_total" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MATRICULA">
+    <Key>
+      <PropertyRef Name="id_matricula" />
+    </Key>
+    <Property Name="id_matricula" Type="int" Nullable="false" />
+    <Property Name="id_estudiante" Type="int" Nullable="false" />
+    <Property Name="carrera" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="fecha_matricula" Type="date" Nullable="false" />
+    <Property Name="semestre" Type="int" Nullable="false" />
+    <Property Name="monto" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PENSIONES">
+    <Key>
+      <PropertyRef Name="id_pensiones" />
+    </Key>
+    <Property Name="id_pensiones" Type="int" Nullable="false" />
+    <Property Name="id_estudiante" Type="int" Nullable="false" />
+    <Property Name="n_cuota" Type="int" Nullable="false" />
+    <Property Name="monto" Type="money" Nullable="false" />
+    <Property Name="fecha_vencimiento" Type="date" Nullable="false" />
+    <Property Name="mora" Type="money" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__FACTURA__id_estu__182C9B23">
+    <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+    <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTUDIANTES">
+        <PropertyRef Name="id_estudiante" />
+      </Principal>
+      <Dependent Role="FACTURA">
+        <PropertyRef Name="id_estudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MATRICULA__id_es__15502E78">
+    <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+    <End Role="MATRICULA" Type="Self.MATRICULA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTUDIANTES">
+        <PropertyRef Name="id_estudiante" />
+      </Principal>
+      <Dependent Role="MATRICULA">
+        <PropertyRef Name="id_estudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PENSIONES__id_es__1273C1CD">
+    <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+    <End Role="PENSIONES" Type="Self.PENSIONES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTUDIANTES">
+        <PropertyRef Name="id_estudiante" />
+      </Principal>
+      <Dependent Role="PENSIONES">
+        <PropertyRef Name="id_estudiante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BD_MATRICULAModelStoreContainer">
+    <EntitySet Name="ESTUDIANTES" EntityType="Self.ESTUDIANTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FACTURA" EntityType="Self.FACTURA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MATRICULA" EntityType="Self.MATRICULA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PENSIONES" EntityType="Self.PENSIONES" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__FACTURA__id_estu__182C9B23" Association="Self.FK__FACTURA__id_estu__182C9B23">
+      <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+      <End Role="FACTURA" EntitySet="FACTURA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MATRICULA__id_es__15502E78" Association="Self.FK__MATRICULA__id_es__15502E78">
+      <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+      <End Role="MATRICULA" EntitySet="MATRICULA" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PENSIONES__id_es__1273C1CD" Association="Self.FK__PENSIONES__id_es__1273C1CD">
+      <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+      <End Role="PENSIONES" EntitySet="PENSIONES" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

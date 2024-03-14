@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BD_MATRICULAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ESTUDIANTES">
+          <Key>
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="dni" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="nombres" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellidos" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="codigo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="correo" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FACTURA">
+          <Key>
+            <PropertyRef Name="id_factura" />
+          </Key>
+          <Property Name="id_factura" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="fecha_emision" Type="date" Nullable="false" />
+          <Property Name="mora" Type="money" Nullable="false" />
+          <Property Name="monto_total" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MATRICULA">
+          <Key>
+            <PropertyRef Name="id_matricula" />
+          </Key>
+          <Property Name="id_matricula" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="carrera" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="fecha_matricula" Type="date" Nullable="false" />
+          <Property Name="semestre" Type="int" Nullable="false" />
+          <Property Name="monto" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PENSIONES">
+          <Key>
+            <PropertyRef Name="id_pensiones" />
+          </Key>
+          <Property Name="id_pensiones" Type="int" Nullable="false" />
+          <Property Name="id_estudiante" Type="int" Nullable="false" />
+          <Property Name="n_cuota" Type="int" Nullable="false" />
+          <Property Name="monto" Type="money" Nullable="false" />
+          <Property Name="fecha_vencimiento" Type="date" Nullable="false" />
+          <Property Name="mora" Type="money" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__FACTURA__id_estu__182C9B23">
+          <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTES">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MATRICULA__id_es__15502E78">
+          <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+          <End Role="MATRICULA" Type="Self.MATRICULA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTES">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="MATRICULA">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PENSIONES__id_es__1273C1CD">
+          <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+          <End Role="PENSIONES" Type="Self.PENSIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTES">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="PENSIONES">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_MATRICULAModelStoreContainer">
+          <EntitySet Name="ESTUDIANTES" EntityType="Self.ESTUDIANTES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FACTURA" EntityType="Self.FACTURA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MATRICULA" EntityType="Self.MATRICULA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PENSIONES" EntityType="Self.PENSIONES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__FACTURA__id_estu__182C9B23" Association="Self.FK__FACTURA__id_estu__182C9B23">
+            <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MATRICULA__id_es__15502E78" Association="Self.FK__MATRICULA__id_es__15502E78">
+            <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+            <End Role="MATRICULA" EntitySet="MATRICULA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PENSIONES__id_es__1273C1CD" Association="Self.FK__PENSIONES__id_es__1273C1CD">
+            <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+            <End Role="PENSIONES" EntitySet="PENSIONES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_MATRICULAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ESTUDIANTES">
+          <Key>
+            <PropertyRef Name="id_estudiante" />
+          </Key>
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="dni" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codigo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="FACTURA" Relationship="Self.FK__FACTURA__id_estu__182C9B23" FromRole="ESTUDIANTES" ToRole="FACTURA" />
+          <NavigationProperty Name="MATRICULA" Relationship="Self.FK__MATRICULA__id_es__15502E78" FromRole="ESTUDIANTES" ToRole="MATRICULA" />
+          <NavigationProperty Name="PENSIONES" Relationship="Self.FK__PENSIONES__id_es__1273C1CD" FromRole="ESTUDIANTES" ToRole="PENSIONES" />
+        </EntityType>
+        <EntityType Name="FACTURA">
+          <Key>
+            <PropertyRef Name="id_factura" />
+          </Key>
+          <Property Name="id_factura" Type="Int32" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="fecha_emision" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="mora" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="monto_total" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="ESTUDIANTES" Relationship="Self.FK__FACTURA__id_estu__182C9B23" FromRole="FACTURA" ToRole="ESTUDIANTES" />
+        </EntityType>
+        <EntityType Name="MATRICULA">
+          <Key>
+            <PropertyRef Name="id_matricula" />
+          </Key>
+          <Property Name="id_matricula" Type="Int32" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="carrera" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="fecha_matricula" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="semestre" Type="Int32" Nullable="false" />
+          <Property Name="monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="ESTUDIANTES" Relationship="Self.FK__MATRICULA__id_es__15502E78" FromRole="MATRICULA" ToRole="ESTUDIANTES" />
+        </EntityType>
+        <EntityType Name="PENSIONES">
+          <Key>
+            <PropertyRef Name="id_pensiones" />
+          </Key>
+          <Property Name="id_pensiones" Type="Int32" Nullable="false" />
+          <Property Name="id_estudiante" Type="Int32" Nullable="false" />
+          <Property Name="n_cuota" Type="Int32" Nullable="false" />
+          <Property Name="monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="fecha_vencimiento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="mora" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="ESTUDIANTES" Relationship="Self.FK__PENSIONES__id_es__1273C1CD" FromRole="PENSIONES" ToRole="ESTUDIANTES" />
+        </EntityType>
+        <Association Name="FK__FACTURA__id_estu__182C9B23">
+          <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTES">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MATRICULA__id_es__15502E78">
+          <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+          <End Role="MATRICULA" Type="Self.MATRICULA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTES">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="MATRICULA">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PENSIONES__id_es__1273C1CD">
+          <End Role="ESTUDIANTES" Type="Self.ESTUDIANTES" Multiplicity="1" />
+          <End Role="PENSIONES" Type="Self.PENSIONES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ESTUDIANTES">
+              <PropertyRef Name="id_estudiante" />
+            </Principal>
+            <Dependent Role="PENSIONES">
+              <PropertyRef Name="id_estudiante" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_MATRICULAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ESTUDIANTES" EntityType="Self.ESTUDIANTES" />
+          <EntitySet Name="FACTURA" EntityType="Self.FACTURA" />
+          <EntitySet Name="MATRICULA" EntityType="Self.MATRICULA" />
+          <EntitySet Name="PENSIONES" EntityType="Self.PENSIONES" />
+          <AssociationSet Name="FK__FACTURA__id_estu__182C9B23" Association="Self.FK__FACTURA__id_estu__182C9B23">
+            <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MATRICULA__id_es__15502E78" Association="Self.FK__MATRICULA__id_es__15502E78">
+            <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+            <End Role="MATRICULA" EntitySet="MATRICULA" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PENSIONES__id_es__1273C1CD" Association="Self.FK__PENSIONES__id_es__1273C1CD">
+            <End Role="ESTUDIANTES" EntitySet="ESTUDIANTES" />
+            <End Role="PENSIONES" EntitySet="PENSIONES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_MATRICULAModelStoreContainer" CdmEntityContainer="BD_MATRICULAEntities">
+          <EntitySetMapping Name="ESTUDIANTES">
+            <EntityTypeMapping TypeName="BD_MATRICULAModel.ESTUDIANTES">
+              <MappingFragment StoreEntitySet="ESTUDIANTES">
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+                <ScalarProperty Name="dni" ColumnName="dni" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+                <ScalarProperty Name="codigo" ColumnName="codigo" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACTURA">
+            <EntityTypeMapping TypeName="BD_MATRICULAModel.FACTURA">
+              <MappingFragment StoreEntitySet="FACTURA">
+                <ScalarProperty Name="id_factura" ColumnName="id_factura" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+                <ScalarProperty Name="fecha_emision" ColumnName="fecha_emision" />
+                <ScalarProperty Name="mora" ColumnName="mora" />
+                <ScalarProperty Name="monto_total" ColumnName="monto_total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MATRICULA">
+            <EntityTypeMapping TypeName="BD_MATRICULAModel.MATRICULA">
+              <MappingFragment StoreEntitySet="MATRICULA">
+                <ScalarProperty Name="id_matricula" ColumnName="id_matricula" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+                <ScalarProperty Name="carrera" ColumnName="carrera" />
+                <ScalarProperty Name="fecha_matricula" ColumnName="fecha_matricula" />
+                <ScalarProperty Name="semestre" ColumnName="semestre" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PENSIONES">
+            <EntityTypeMapping TypeName="BD_MATRICULAModel.PENSIONES">
+              <MappingFragment StoreEntitySet="PENSIONES">
+                <ScalarProperty Name="id_pensiones" ColumnName="id_pensiones" />
+                <ScalarProperty Name="id_estudiante" ColumnName="id_estudiante" />
+                <ScalarProperty Name="n_cuota" ColumnName="n_cuota" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="fecha_vencimiento" ColumnName="fecha_vencimiento" />
+                <ScalarProperty Name="mora" ColumnName="mora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
