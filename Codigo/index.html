@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 1</title>
+    <link rel="stylesheet" href="/CSS/login1.css">
+</head>
+<body>
+    <form>
+        <h2>
+            Inicio de sesión
+        </h2>
+        <label for="user">
+            Usuario:
+        </label>
+        <input type="text" id = user required>
+        
+        <label fro="password">
+            Contraseña:
+        </label>
+        <input type="password" id = password required>
+
+        <div class="button-container">
+            <input type="submit" class="btn_1" value="Iniciar sesión">
+
+            <input type="submit" class="btn_2" value="Crear usuario" onclick="crearUsuario()">
+            <script>
+                function crearUsuario(){
+                    window.location.href = "/HTML/registro.html"
+                }
+            </script>
+        </div>
+
+    </form>
+</body>
+</html>

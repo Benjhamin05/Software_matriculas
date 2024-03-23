@@ -1,36 +1,44 @@
-CREATE DATABASE BD_MATRICULA
+create DATABASE BD_MATRICULA
 
 USE BD_MATRICULA
 
 CREATE TABLE ESTUDIANTES(
-id_estudiante INT PRIMARY KEY,
-dni VARCHAR(8)NOT NULL,
-nombre VARCHAR(8)NOT NULL,
-codigo char(10)not null,
+id_estudiante	INT PRIMARY KEY,
+dni				VARCHAR(8) NOT NULL,
+nombres			VARCHAR(50) NOT NULL,
+apellidos		VARCHAR(50) NOT NULL,
+codigo			VARCHAR(10) NOT NULL,
+correo			VARCHAR(100) NOT NULL
 )
 
 CREATE TABLE PENSIONES(
-id_PENSIONES INT PRIMARY KEY,
-monto DECIMAL(10, 2) not null,
-fecha_pago DATE not null,
-estado_pago VARCHAR(20) not null,
-id_estudiante INT not null,
+id_pensiones		INT PRIMARY KEY,
+id_estudiante		INT NOT NULL,
+n_cuota				INT NOT NULL,
+monto				MONEY NOT NULL,
+fecha_vencimiento	DATE NOT NULL,
+mora				MONEY NOT NULL,
+
 FOREIGN KEY (id_estudiante) REFERENCES ESTUDIANTES(id_estudiante)
 )
 
-
 CREATE TABLE MATRICULA(
-id_matricula INT PRIMARY KEY not null,
-fecha_matricula DATE not null,
-periodo_academico VARCHAR(20)not null,
-id_estudiante INT not null,
+id_matricula	INT PRIMARY KEY,
+id_estudiante	INT NOT NULL,
+carrera			VARCHAR(100) NOT NULL,
+fecha_matricula DATE NOT NULL,
+semestre		INT NOT NULL,
+monto			MONEY NOT NULL,
+
 FOREIGN KEY (id_estudiante) REFERENCES ESTUDIANTES(id_estudiante)
 )
 
 CREATE TABLE FACTURA(
-id_factura INT PRIMARY KEY not null,
-fecha_emision DATE not null,
-monto_total DECIMAL(10, 2) not null,
-id_estudiante INT not null,
+id_factura		INT PRIMARY KEY NOT NULL,
+id_estudiante	INT NOT NULL,
+fecha_emision	DATE NOT NULL,
+mora			MONEY NOT NULL,
+monto_total		MONEY NOT NULL,
+
 FOREIGN KEY (id_estudiante) REFERENCES ESTUDIANTES(id_estudiante)
 )
