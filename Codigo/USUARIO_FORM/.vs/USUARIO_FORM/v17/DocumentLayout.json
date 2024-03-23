@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26F46F73-DE70-4024-8169-E3E07EBE4F02}|USUARIO_FORM.csproj|c:\\users\\rodri\\source\\repos\\usuario_form\\pensionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{26F46F73-DE70-4024-8169-E3E07EBE4F02}|USUARIO_FORM.csproj|solutionrelative:pensionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F46F73-DE70-4024-8169-E3E07EBE4F02}|USUARIO_FORM.csproj|C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\pensionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26F46F73-DE70-4024-8169-E3E07EBE4F02}|USUARIO_FORM.csproj|solutionrelative:pensionesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F46F73-DE70-4024-8169-E3E07EBE4F02}|USUARIO_FORM.csproj|C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26F46F73-DE70-4024-8169-E3E07EBE4F02}|USUARIO_FORM.csproj|solutionrelative:datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Datos.cs",
+              "DocumentMoniker": "C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\Datos.cs",
+              "RelativeDocumentMoniker": "Datos.cs",
+              "ToolTip": "C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\Datos.cs",
+              "RelativeToolTip": "Datos.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAACRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T03:02:39.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PensionesForm.cs",
+              "DocumentMoniker": "C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\PensionesForm.cs",
+              "RelativeDocumentMoniker": "PensionesForm.cs",
+              "ToolTip": "C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\PensionesForm.cs",
+              "RelativeToolTip": "PensionesForm.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAIwDYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T02:55:28.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PensionesForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\PensionesForm.cs",
+              "RelativeDocumentMoniker": "PensionesForm.cs",
+              "ToolTip": "C:\\Users\\Rodri\\source\\repos\\USUARIO_FORM\\PensionesForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "PensionesForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-10T02:50:47.113Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
