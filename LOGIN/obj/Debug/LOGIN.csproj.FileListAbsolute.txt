@@ -1,0 +1,10 @@
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\bin\Debug\LOGIN.exe.config
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\bin\Debug\LOGIN.exe
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\bin\Debug\LOGIN.pdb
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\obj\Debug\LOGIN.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\obj\Debug\LOGIN.Form1.resources
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\obj\Debug\LOGIN.Properties.Resources.resources
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\obj\Debug\LOGIN.csproj.GenerateResource.cache
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\obj\Debug\LOGIN.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\obj\Debug\LOGIN.exe
+C:\Users\ACER\Desktop\PROYECTO\LOGIN\obj\Debug\LOGIN.pdb
