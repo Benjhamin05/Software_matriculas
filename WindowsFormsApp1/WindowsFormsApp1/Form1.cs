@@ -62,5 +62,11 @@ namespace WindowsFormsApp1
             var dalEstu = new dalEstudiantes();
             dalEstu.eliminarEstudiante((int)txtID.Value);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form2 formulario = new Form2();
+            formulario.ShowDialog();
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-    internal class dalMatricula
+    public class dalMatricula
     {
         public CMatricula seleccionarMatricula(int ID_M)
         {
