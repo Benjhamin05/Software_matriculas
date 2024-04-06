@@ -26,7 +26,5 @@ id_estudiante		INT NOT NULL,
 n_pension			INT NOT NULL,
 monto				MONEY NOT NULL,
 fecha_p				DATE NOT NULL,
-mora				MONEY NOT NULL,
-
 FOREIGN KEY (id_estudiante) REFERENCES ESTUDIANTE(id_estudiante)
 )

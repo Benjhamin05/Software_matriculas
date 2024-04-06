@@ -67,5 +67,16 @@ namespace WindowsFormsApp1
             MessageBox.Show(perComun.ToString());
             dalEstu.actualizarMatricula(perComun);
         }
+
+        private void txtFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form3 formulario = new Form3();
+            formulario.ShowDialog();
+        }
     }
 }

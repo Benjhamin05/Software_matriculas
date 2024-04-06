@@ -1,17 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\",
+  "WorkspaceRootPath": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|d:\\proyecto\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|c:\\users\\kevin\\onedrive\\documentos\\asoft\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|solutionrelative:windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|c:\\users\\kevin\\onedrive\\documentos\\asoft\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|solutionrelative:windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92B053DD-F615-42DD-A261-348135193A41}|DAL\\DAL.csproj|c:\\users\\kevin\\onedrive\\documentos\\asoft\\software_matriculas\\windowsformsapp1\\dal\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{92B053DD-F615-42DD-A261-348135193A41}|DAL\\DAL.csproj|solutionrelative:dal\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|c:\\users\\kevin\\onedrive\\documentos\\asoft\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|solutionrelative:windowsformsapp1\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|c:\\users\\kevin\\onedrive\\documentos\\asoft\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|c:\\users\\kevin\\onedrive\\documentos\\asoft\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|solutionrelative:windowsformsapp1\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|c:\\users\\kevin\\onedrive\\documentos\\asoft\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89EFF972-7322-45FB-9D8D-A520B7B6D137}|comun\\comun.csproj|d:\\proyecto\\software_matriculas\\windowsformsapp1\\comun\\cpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{89EFF972-7322-45FB-9D8D-A520B7B6D137}|comun\\comun.csproj|C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\comun\\cpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89EFF972-7322-45FB-9D8D-A520B7B6D137}|comun\\comun.csproj|solutionrelative:comun\\cpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92B053DD-F615-42DD-A261-348135193A41}|DAL\\DAL.csproj|d:\\proyecto\\software_matriculas\\windowsformsapp1\\dal\\dalpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{92B053DD-F615-42DD-A261-348135193A41}|DAL\\DAL.csproj|C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\dal\\dalpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92B053DD-F615-42DD-A261-348135193A41}|DAL\\DAL.csproj|solutionrelative:dal\\dalpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,41 +46,118 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form2.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form2.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwEwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T22:06:49.579Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form3.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form3.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAEwEwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T22:02:08.928Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\DAL\\Model1.edmx",
+              "RelativeDocumentMoniker": "DAL\\Model1.edmx",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\DAL\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "DAL\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-04-06T22:29:33.57Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAtwEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T22:24:50.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form2.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T22:06:47.415Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form3.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form3.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form3.cs [Dise\u00F1o]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form3.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T21:52:44.153Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "dalPension.cs",
-              "DocumentMoniker": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\DAL\\dalPension.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\DAL\\dalPension.cs",
               "RelativeDocumentMoniker": "DAL\\dalPension.cs",
-              "ToolTip": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\DAL\\dalPension.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\DAL\\dalPension.cs",
               "RelativeToolTip": "DAL\\dalPension.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAywEIAAAAAAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAUwEIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T21:43:15.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "CPension.cs",
-              "DocumentMoniker": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\comun\\CPension.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\comun\\CPension.cs",
               "RelativeDocumentMoniker": "comun\\CPension.cs",
-              "ToolTip": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\comun\\CPension.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\comun\\CPension.cs",
               "RelativeToolTip": "comun\\CPension.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBcAAAAFAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBcAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T21:41:59.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
-              "ToolTip": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\asoft\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "WindowsFormsApp1\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T17:01:21.912Z",
