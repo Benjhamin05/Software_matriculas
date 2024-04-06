@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\UTEA\\CICLO_VII\\Ingenier\u00EDa_de_Software_II\\Proyecto\\Software_matriculas\\WindowsFormsApp1\\",
+  "WorkspaceRootPath": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|c:\\utea\\ciclo_vii\\ingenier\u00EDa_de_software_ii\\proyecto\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|d:\\proyecto\\software_matriculas\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1C3B16D9-C630-42A5-BD92-EDB899D96745}|WindowsFormsApp1\\WPL.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89EFF972-7322-45FB-9D8D-A520B7B6D137}|comun\\comun.csproj|d:\\proyecto\\software_matriculas\\windowsformsapp1\\comun\\cpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89EFF972-7322-45FB-9D8D-A520B7B6D137}|comun\\comun.csproj|solutionrelative:comun\\cpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92B053DD-F615-42DD-A261-348135193A41}|DAL\\DAL.csproj|d:\\proyecto\\software_matriculas\\windowsformsapp1\\dal\\dalpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92B053DD-F615-42DD-A261-348135193A41}|DAL\\DAL.csproj|solutionrelative:dal\\dalpension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,15 +22,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "dalPension.cs",
+              "DocumentMoniker": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\DAL\\dalPension.cs",
+              "RelativeDocumentMoniker": "DAL\\dalPension.cs",
+              "ToolTip": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\DAL\\dalPension.cs",
+              "RelativeToolTip": "DAL\\dalPension.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAywEIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T21:43:15.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CPension.cs",
+              "DocumentMoniker": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\comun\\CPension.cs",
+              "RelativeDocumentMoniker": "comun\\CPension.cs",
+              "ToolTip": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\comun\\CPension.cs",
+              "RelativeToolTip": "comun\\CPension.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T21:41:59.939Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\UTEA\\CICLO_VII\\Ingenier\u00EDa_de_Software_II\\Proyecto\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "DocumentMoniker": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
-              "ToolTip": "C:\\UTEA\\CICLO_VII\\Ingenier\u00EDa_de_Software_II\\Proyecto\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\proyecto\\Software_matriculas\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "WindowsFormsApp1\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-06T17:01:21.912Z",
