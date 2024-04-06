@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dalEstudiantes.cs" />
+    <Compile Include="dalMatricula.cs" />
     <Compile Include="ESTUDIANTE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
