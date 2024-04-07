@@ -9,8 +9,8 @@
     <Property Name="nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="telefono" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="MATRICULA" Relationship="Self.FK__MATRICULA__id_es__164452B1" FromRole="ESTUDIANTE" ToRole="MATRICULA" />
-    <NavigationProperty Name="PENSION" Relationship="Self.FK__PENSION__id_estu__1920BF5C" FromRole="ESTUDIANTE" ToRole="PENSION" />
+    <NavigationProperty Name="MATRICULA" Relationship="Self.FK__MATRICULA__id_es__1273C1CD" FromRole="ESTUDIANTE" ToRole="MATRICULA" />
+    <NavigationProperty Name="PENSION" Relationship="Self.FK__PENSION__id_estu__15502E78" FromRole="ESTUDIANTE" ToRole="PENSION" />
   </EntityType>
   <EntityType Name="MATRICULA">
     <Key>
@@ -21,7 +21,7 @@
     <Property Name="nivel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="monto_matricula" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="fecha_m" Type="DateTime" Nullable="false" Precision="0" />
-    <NavigationProperty Name="ESTUDIANTE" Relationship="Self.FK__MATRICULA__id_es__164452B1" FromRole="MATRICULA" ToRole="ESTUDIANTE" />
+    <NavigationProperty Name="ESTUDIANTE" Relationship="Self.FK__MATRICULA__id_es__1273C1CD" FromRole="MATRICULA" ToRole="ESTUDIANTE" />
   </EntityType>
   <EntityType Name="PENSION">
     <Key>
@@ -32,10 +32,9 @@
     <Property Name="n_pension" Type="Int32" Nullable="false" />
     <Property Name="monto" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <Property Name="fecha_p" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="mora" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-    <NavigationProperty Name="ESTUDIANTE" Relationship="Self.FK__PENSION__id_estu__1920BF5C" FromRole="PENSION" ToRole="ESTUDIANTE" />
+    <NavigationProperty Name="ESTUDIANTE" Relationship="Self.FK__PENSION__id_estu__15502E78" FromRole="PENSION" ToRole="ESTUDIANTE" />
   </EntityType>
-  <Association Name="FK__MATRICULA__id_es__164452B1">
+  <Association Name="FK__MATRICULA__id_es__1273C1CD">
     <End Role="ESTUDIANTE" Type="Self.ESTUDIANTE" Multiplicity="1" />
     <End Role="MATRICULA" Type="Self.MATRICULA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -47,7 +46,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PENSION__id_estu__1920BF5C">
+  <Association Name="FK__PENSION__id_estu__15502E78">
     <End Role="ESTUDIANTE" Type="Self.ESTUDIANTE" Multiplicity="1" />
     <End Role="PENSION" Type="Self.PENSION" Multiplicity="*" />
     <ReferentialConstraint>
@@ -63,11 +62,11 @@
     <EntitySet Name="ESTUDIANTE" EntityType="Self.ESTUDIANTE" />
     <EntitySet Name="MATRICULA" EntityType="Self.MATRICULA" />
     <EntitySet Name="PENSION" EntityType="Self.PENSION" />
-    <AssociationSet Name="FK__MATRICULA__id_es__164452B1" Association="Self.FK__MATRICULA__id_es__164452B1">
+    <AssociationSet Name="FK__MATRICULA__id_es__1273C1CD" Association="Self.FK__MATRICULA__id_es__1273C1CD">
       <End Role="ESTUDIANTE" EntitySet="ESTUDIANTE" />
       <End Role="MATRICULA" EntitySet="MATRICULA" />
     </AssociationSet>
-    <AssociationSet Name="FK__PENSION__id_estu__1920BF5C" Association="Self.FK__PENSION__id_estu__1920BF5C">
+    <AssociationSet Name="FK__PENSION__id_estu__15502E78" Association="Self.FK__PENSION__id_estu__15502E78">
       <End Role="ESTUDIANTE" EntitySet="ESTUDIANTE" />
       <End Role="PENSION" EntitySet="PENSION" />
     </AssociationSet>

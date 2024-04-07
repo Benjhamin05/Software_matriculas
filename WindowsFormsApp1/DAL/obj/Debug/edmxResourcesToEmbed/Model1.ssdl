@@ -29,9 +29,8 @@
     <Property Name="n_pension" Type="int" Nullable="false" />
     <Property Name="monto" Type="money" Nullable="false" />
     <Property Name="fecha_p" Type="date" Nullable="false" />
-    <Property Name="mora" Type="money" Nullable="false" />
   </EntityType>
-  <Association Name="FK__MATRICULA__id_es__164452B1">
+  <Association Name="FK__MATRICULA__id_es__1273C1CD">
     <End Role="ESTUDIANTE" Type="Self.ESTUDIANTE" Multiplicity="1" />
     <End Role="MATRICULA" Type="Self.MATRICULA" Multiplicity="*" />
     <ReferentialConstraint>
@@ -43,7 +42,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__PENSION__id_estu__1920BF5C">
+  <Association Name="FK__PENSION__id_estu__15502E78">
     <End Role="ESTUDIANTE" Type="Self.ESTUDIANTE" Multiplicity="1" />
     <End Role="PENSION" Type="Self.PENSION" Multiplicity="*" />
     <ReferentialConstraint>
@@ -59,11 +58,11 @@
     <EntitySet Name="ESTUDIANTE" EntityType="Self.ESTUDIANTE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MATRICULA" EntityType="Self.MATRICULA" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PENSION" EntityType="Self.PENSION" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__MATRICULA__id_es__164452B1" Association="Self.FK__MATRICULA__id_es__164452B1">
+    <AssociationSet Name="FK__MATRICULA__id_es__1273C1CD" Association="Self.FK__MATRICULA__id_es__1273C1CD">
       <End Role="ESTUDIANTE" EntitySet="ESTUDIANTE" />
       <End Role="MATRICULA" EntitySet="MATRICULA" />
     </AssociationSet>
-    <AssociationSet Name="FK__PENSION__id_estu__1920BF5C" Association="Self.FK__PENSION__id_estu__1920BF5C">
+    <AssociationSet Name="FK__PENSION__id_estu__15502E78" Association="Self.FK__PENSION__id_estu__15502E78">
       <End Role="ESTUDIANTE" EntitySet="ESTUDIANTE" />
       <End Role="PENSION" EntitySet="PENSION" />
     </AssociationSet>

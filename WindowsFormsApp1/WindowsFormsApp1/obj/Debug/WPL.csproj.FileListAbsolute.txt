@@ -37,3 +37,4 @@ C:\Users\kevin\OneDrive\Documentos\asoft\Software_matriculas\WindowsFormsApp1\Wi
 C:\Users\kevin\OneDrive\Documentos\asoft\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WPL.csproj.Up2Date
 C:\Users\kevin\OneDrive\Documentos\asoft\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\kevin\OneDrive\Documentos\asoft\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources

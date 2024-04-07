@@ -15,11 +15,11 @@ namespace DAL
             {
                 var per = new CPension();
                 var pPension = bd.PENSION.First(s => s.id_pensiones == ID);
+                per.id_pensiones = pPension.id_pensiones;
                 per.id_estudiante = pPension.id_estudiante;
                 per.n_pension = pPension.n_pension;
                 per.monto = pPension.monto;
                 per.fecha_p = pPension.fecha_p;
-                per.mora = pPension.mora;
                 return per;
             }
         }
@@ -29,11 +29,11 @@ namespace DAL
             using (var bd = new BD_MATRICULAEntities())
             {
                 var per = new PENSION();
+                per.id_pensiones = pPension.id_pensiones;
                 per.id_estudiante = pPension.id_estudiante;
                 per.n_pension = pPension.n_pension;
                 per.monto = pPension.monto;
                 per.fecha_p = pPension.fecha_p;
-                per.mora = pPension.mora;
                 bd.PENSION.Add(per);
                 bd.SaveChanges();
             }
@@ -48,7 +48,6 @@ namespace DAL
                 per.n_pension = pPension.n_pension;
                 per.monto = pPension.monto;
                 per.fecha_p = pPension.fecha_p;
-                per.mora = pPension.mora;
                 bd.SaveChanges();
             }
         }

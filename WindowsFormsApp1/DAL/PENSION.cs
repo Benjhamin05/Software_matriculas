@@ -19,7 +19,6 @@ namespace DAL
         public int n_pension { get; set; }
         public decimal monto { get; set; }
         public System.DateTime fecha_p { get; set; }
-        public decimal mora { get; set; }
     
         public virtual ESTUDIANTE ESTUDIANTE { get; set; }
     }

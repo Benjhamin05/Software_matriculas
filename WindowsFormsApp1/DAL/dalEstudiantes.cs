@@ -19,7 +19,7 @@ namespace DAL
                 per.dni = pEstudiante.dni;
                 per.nombres = pEstudiante.nombres;
                 per.apellidos = pEstudiante.apellidos;
-                per.telefono= pEstudiante.telefono;
+                per.telefono = pEstudiante.telefono;
                 return per;
             }
         }

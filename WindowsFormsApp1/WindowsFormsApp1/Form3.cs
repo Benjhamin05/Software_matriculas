@@ -19,16 +19,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             var dalPensi = new dalPension();
@@ -46,7 +36,7 @@ namespace WindowsFormsApp1
             perComun.id_pensiones = (int)txtidp.Value;
             perComun.id_estudiante = (int)txtide.Value;
             perComun.n_pension= (int)txtNpension.Value;
-            perComun.monto = (decimal)txtMonto.Value;
+            perComun.monto = txtMonto.Value;
             perComun.fecha_p = DateTime.Parse(txtFecha.Text);
 
             MessageBox.Show(perComun.ToString());

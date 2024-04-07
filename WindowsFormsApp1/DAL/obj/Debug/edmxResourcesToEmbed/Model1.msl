@@ -31,7 +31,6 @@
           <ScalarProperty Name="n_pension" ColumnName="n_pension" />
           <ScalarProperty Name="monto" ColumnName="monto" />
           <ScalarProperty Name="fecha_p" ColumnName="fecha_p" />
-          <ScalarProperty Name="mora" ColumnName="mora" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
