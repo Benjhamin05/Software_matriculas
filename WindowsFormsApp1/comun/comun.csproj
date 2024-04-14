@@ -46,5 +46,11 @@
     <Compile Include="CMatricula.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Agenda.be\Agenda.be.csproj">
+      <Project>{531433F7-19D5-423E-879D-BCCA640FF17F}</Project>
+      <Name>Agenda.be</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

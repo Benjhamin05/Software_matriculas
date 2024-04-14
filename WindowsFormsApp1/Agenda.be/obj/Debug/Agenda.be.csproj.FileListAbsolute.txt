@@ -1,0 +1,6 @@
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\Agenda.be\bin\Debug\Agenda.be.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\Agenda.be\bin\Debug\Agenda.be.pdb
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\Agenda.be\obj\Debug\Agenda.be.csproj.AssemblyReference.cache
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\Agenda.be\obj\Debug\Agenda.be.csproj.CoreCompileInputs.cache
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\Agenda.be\obj\Debug\Agenda.be.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\Agenda.be\obj\Debug\Agenda.be.pdb

@@ -1,4 +1,5 @@
-﻿using comun;
+﻿//using comun;
+using Agenda.be;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ namespace DAL
 {
     public class dalMatricula
     {
-        public CMatricula seleccionarMatricula(int ID_M)
+        public BEMatricula seleccionarMatricula(int ID_M)
         {
             using (var bd = new BD_MATRICULAEntities())
             {
-                var per = new CMatricula();
+                var per = new BEMatricula();
                 var pMatricula = bd.MATRICULA.First(s => s.id_matricula == ID_M);
                 per.idMatricula = pMatricula.id_matricula;
                 per.idEstudiante = pMatricula.id_estudiante;
@@ -24,41 +25,65 @@ namespace DAL
             }
         }
 
-        public void registrarMatricula(CMatricula pMatricula)
+        public bool registrarMatricula(BEMatricula pMatricula)
         {
             using (var bd = new BD_MATRICULAEntities())
             {
-                var per = new MATRICULA();
-                per.id_matricula = pMatricula.idMatricula;
-                per.id_estudiante = pMatricula.idEstudiante;
-                per.nivel = pMatricula.nivel;
-                per.monto_matricula = pMatricula.monto_m;
-                per.fecha_m = pMatricula.fecha_m;
-                bd.MATRICULA.Add(per);
-                bd.SaveChanges();
+                try
+                {
+                    var per = new MATRICULA();
+                    per.id_matricula = pMatricula.idMatricula;
+                    per.id_estudiante = pMatricula.idEstudiante;
+                    per.nivel = pMatricula.nivel;
+                    per.monto_matricula = pMatricula.monto_m;
+                    per.fecha_m = pMatricula.fecha_m;
+                    bd.MATRICULA.Add(per);
+                    bd.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
         }
 
-        public void actualizarMatricula(CMatricula pMatricula)
+        public bool actualizarMatricula(BEMatricula pMatricula)
         {
             using (var bd = new BD_MATRICULAEntities())
             {
-                var per = bd.MATRICULA.First(s => s.id_matricula == pMatricula.idMatricula);
-                per.id_estudiante = pMatricula.idEstudiante;
-                per.nivel = pMatricula.nivel;
-                per.monto_matricula = pMatricula.monto_m;
-                per.fecha_m = pMatricula.fecha_m;
-                bd.SaveChanges();
+                try
+                {
+                    var per = bd.MATRICULA.First(s => s.id_matricula == pMatricula.idMatricula);
+                    per.id_estudiante = pMatricula.idEstudiante;
+                    per.nivel = pMatricula.nivel;
+                    per.monto_matricula = pMatricula.monto_m;
+                    per.fecha_m = pMatricula.fecha_m;
+                    bd.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
         }
 
-        public void eliminarMatricula(int ID_MATRICULA)
+        public bool eliminarMatricula(int ID_MATRICULA)
         {
             using (var bd = new BD_MATRICULAEntities())
             {
-                var per = bd.MATRICULA.First(s => s.id_matricula == ID_MATRICULA);
-                bd.MATRICULA.Remove(per);
-                bd.SaveChanges();
+                try
+                {
+                    var per = bd.MATRICULA.First(s => s.id_matricula == ID_MATRICULA);
+                    bd.MATRICULA.Remove(per);
+                    bd.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
         }
     }

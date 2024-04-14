@@ -1,0 +1,12 @@
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\obj\Debug\Agenda.dal.csproj.AssemblyReference.cache
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\obj\Debug\Agenda.dal.csproj.CoreCompileInputs.cache
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\obj\Debug\DAL.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\obj\Debug\DAL.pdb
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\bin\Debug\DAL.dll.config
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\bin\Debug\DAL.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\bin\Debug\DAL.pdb
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\bin\Debug\Agenda.be.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\bin\Debug\EntityFramework.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\bin\Debug\Agenda.be.pdb
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\bin\Debug\EntityFramework.xml
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\DAL\obj\Debug\Agenda.dal.csproj.Up2Date

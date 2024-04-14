@@ -5,35 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL
-{
+{/*
     internal class BLAgenda
     {
         public BEEstudiantes SeleccionarPersona(int codigo)
         {
-            var bePersona = new BEEstudiantes();
+            var beEstudiante = new BEEstudiantes();
             try
             {
-                var dalPersona = new DAL.dalEstudiantes();
-                var cPersona = dalPersona.seleccionarPersona(codigo);
+                var dalEstudiante = new DAL.dalEstudiantes();
+                var cPersona = dalEstudiantes.seleccionarEstudiante(codigo);
 
                 bePersona.codigo = cPersona.codigo;
                 bePersona.nombre = cPersona.nombre;
                 bePersona.apellidos = cPersona.apellidos;
                 bePersona.direccion = cPersona.direccion;
-
-                foreach (var tel in cPersona.telefonos)
-                {
-                    var btel = new BETelefono();
-                    btel.codTelefono = tel.codTelefono;
-                    btel.nroTelefono = tel.nroTelefono;
-                    bePersona.telefonos.Add(btel);
-                }
-                return bePersona;
             }
             catch (Exception)
             {
                 throw;
             }
         }
-    }
+    }*/
 }
