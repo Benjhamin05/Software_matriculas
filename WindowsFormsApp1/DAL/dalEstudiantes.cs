@@ -31,11 +31,11 @@ namespace DAL
                     var mat = new MATRICULA() { id_matricula = item.idMatricula, id_estudiante = item.idEstudiante, nivel = item.nivel, monto_matricula = item.monto_m, fecha_m = item.fecha_m };
                     per.MATRICULA.Add(mat);
                 }
-                foreach (var item in pEstudiante.pensiones)
+                /*foreach (var item in pEstudiante.pensiones)
                 {
                     var pens = new PENSION() { id_pensiones = item.id_pensiones, id_estudiante = item.id_estudiante, n_pension = item.n_pension, monto = item.monto, fecha_p = item.fecha_p };
                     per.PENSION.Add(pens);
-                }
+                }*/
                 bd.ESTUDIANTE.Add(per);
                 bd.SaveChanges();
                 return true;
@@ -55,7 +55,7 @@ namespace DAL
                 if (estudiante.MATRICULA != null)
                 {
                     estudiante.MATRICULA.Clear();
-                    foreach (var mat in pEstudiantes.matriculas)
+                    /*foreach (var mat in pEstudiantes.matriculas)
                     {
                         var matr = new MATRICULA() { id_matricula = mat.idMatricula, id_estudiante = mat.idEstudiante, nivel = mat.nivel, monto_matricula = mat.monto_m, fecha_m = mat.fecha_m };
                         estudiante.MATRICULA.Add(matr);
@@ -64,7 +64,7 @@ namespace DAL
                     {
                         var pens = new PENSION() { id_pensiones = mat.id_pensiones, id_estudiante = mat.id_estudiante, n_pension = mat.n_pension, monto = mat.monto, fecha_p = mat.fecha_p };
                         estudiante.PENSION.Add(pens);
-                    }
+                    }*/
                 }
                 return true;               
             }

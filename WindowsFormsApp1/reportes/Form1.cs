@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace reportes
 {
-    public partial class Form5 : Form
+    public partial class Form1 : Form
     {
-        public Form5()
+        public Form1()
         {
             InitializeComponent();
         }

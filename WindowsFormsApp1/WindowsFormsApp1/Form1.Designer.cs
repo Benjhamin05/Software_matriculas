@@ -54,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.ListMatricula = new System.Windows.Forms.DataGridView();
             this.ListPension = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtID)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListMatricula)).BeginInit();
@@ -322,11 +323,22 @@
             this.ListPension.Size = new System.Drawing.Size(619, 206);
             this.ListPension.TabIndex = 23;
             // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(483, 580);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(224, 38);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1086, 625);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.ListPension);
             this.Controls.Add(this.ListMatricula);
             this.Controls.Add(this.label8);
@@ -384,6 +396,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView ListMatricula;
         private System.Windows.Forms.DataGridView ListPension;
+        private System.Windows.Forms.Button button7;
     }
 }
 

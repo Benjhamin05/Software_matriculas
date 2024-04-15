@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda.bll", "Agenda.bll\Ag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda1", "WindowsFormsApp1\Agenda1.csproj", "{1C3B16D9-C630-42A5-BD92-EDB899D96745}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reportes", "reportes\reportes.csproj", "{060F98F8-777E-41F6-8353-601F8E6EC21F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{1C3B16D9-C630-42A5-BD92-EDB899D96745}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C3B16D9-C630-42A5-BD92-EDB899D96745}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C3B16D9-C630-42A5-BD92-EDB899D96745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{060F98F8-777E-41F6-8353-601F8E6EC21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{060F98F8-777E-41F6-8353-601F8E6EC21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{060F98F8-777E-41F6-8353-601F8E6EC21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{060F98F8-777E-41F6-8353-601F8E6EC21F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +63,7 @@ Global
 		{531433F7-19D5-423E-879D-BCCA640FF17F} = {C6A630C6-C263-4AA4-8C3C-6F6FA1CF1321}
 		{7D45A393-0770-4BD1-8039-BDFC525720C1} = {C6A630C6-C263-4AA4-8C3C-6F6FA1CF1321}
 		{1C3B16D9-C630-42A5-BD92-EDB899D96745} = {86FD454A-1D8E-4894-A1B1-A588C52B7F6C}
+		{060F98F8-777E-41F6-8353-601F8E6EC21F} = {86FD454A-1D8E-4894-A1B1-A588C52B7F6C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9111CA1-190A-4B0D-8A92-8D148995F992}
