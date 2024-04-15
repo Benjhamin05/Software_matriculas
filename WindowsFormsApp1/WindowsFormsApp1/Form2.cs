@@ -1,7 +1,8 @@
 ﻿//using comun;
 using Agenda.be;
+using Agenda.bll;
 using BLL;
-using DAL;
+//using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,20 @@ namespace WindowsFormsApp1
 {
     public partial class Form2 : Form
     {
+        private blAgenda agenda;
         public Form2()
         {
             InitializeComponent();
+            agenda = new blAgenda();
+        }
+
+        private void Limpiar()
+        {
+            txtIdMatri.Text = "";
+            txtIdAlumno.Text = "";
+            txtNivel.Text = "";
+            txtMonto.Text = "";
+            txtFecha.Text = "";
         }
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
@@ -29,8 +41,7 @@ namespace WindowsFormsApp1
 
         private void Seleccionar_m_Click(object sender, EventArgs e)
         {
-            var dalMatri = new dalMatricula();
-            var perComun = dalMatri.seleccionarMatricula((int)txtIdMatri.Value);
+            var perComun = agenda.seleccionarMatricula((int)txtIdMatri.Value);
             if (perComun != null)
             {
                 txtIdAlumno.Value = perComun.idEstudiante;
@@ -52,7 +63,7 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEMatricula();
-                var dalMatri = new dalMatricula();
+                //var dalMatri = new dalMatricula();
                 perComun.idMatricula = (int)txtIdMatri.Value;
                 perComun.idEstudiante = (int)txtIdAlumno.Value;
                 perComun.nivel = txtNivel.Text;
@@ -61,12 +72,12 @@ namespace WindowsFormsApp1
 
                 //MessageBox.Show(perComun.ToString());
                 //dalMatri.registrarMatricula(perComun);
-                if (!dalMatri.registrarMatricula(perComun))
+                if (!agenda.insertarMatricula(perComun))
                     MessageBox.Show("No se pudo registrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Registrado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Poner para que se limpie los campos
+                    Limpiar();
                 }
             }
         }
@@ -74,14 +85,15 @@ namespace WindowsFormsApp1
         private void Eliminar_m_Click(object sender, EventArgs e)
         {
             //logica de negocio
-            if ((int)txtIdMatri.Value == 1)
+            var resultado = agenda.eliminarMatricula((int)txtIdMatri.Value);
+            if (!resultado)
                 MessageBox.Show("No se puede eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                var dalMatri = new dalMatricula();
-                dalMatri.eliminarMatricula((int)txtIdMatri.Value);
+                //var dalMatri = new dalMatricula();
+                //dalMatri.eliminarMatricula((int)txtIdMatri.Value);
                 MessageBox.Show("Matrícula eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Poner para que se limpie los campos
+                Limpiar();
             }
         }
 
@@ -93,7 +105,7 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEMatricula();
-                var dalMatri = new dalMatricula();
+                //var dalMatri = new dalMatricula();
                 perComun.idMatricula = (int)txtIdMatri.Value;
                 perComun.idEstudiante = (int)txtIdMatri.Value;
                 perComun.nivel = txtNivel.Text;
@@ -102,12 +114,12 @@ namespace WindowsFormsApp1
 
                 //MessageBox.Show(perComun.ToString());
                 //dalEstu.actualizarMatricula(perComun);
-                if (!dalMatri.actualizarMatricula(perComun))
+                if (!agenda.actualizarMatricula(perComun))
                     MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Actualizado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //poner para que se limien los campos
+                    Limpiar();
                 }
             }
         }
@@ -121,6 +133,11 @@ namespace WindowsFormsApp1
         {
             Form3 formulario = new Form3();
             formulario.ShowDialog();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

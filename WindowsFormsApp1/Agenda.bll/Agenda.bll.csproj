@@ -49,10 +49,6 @@
       <Project>{531433f7-19d5-423e-879d-bcca640ff17f}</Project>
       <Name>Agenda.be</Name>
     </ProjectReference>
-    <ProjectReference Include="..\comun\comun.csproj">
-      <Project>{89eff972-7322-45fb-9d8d-a520b7b6d137}</Project>
-      <Name>comun</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\Agenda.dal.csproj">
       <Project>{ce7930a4-5fa2-4c5e-91f8-2834d8a35ac0}</Project>
       <Name>Agenda.dal</Name>

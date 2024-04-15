@@ -110,10 +110,6 @@
       <Project>{531433f7-19d5-423e-879d-bcca640ff17f}</Project>
       <Name>Agenda.be</Name>
     </ProjectReference>
-    <ProjectReference Include="..\comun\comun.csproj">
-      <Project>{89eff972-7322-45fb-9d8d-a520b7b6d137}</Project>
-      <Name>comun</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

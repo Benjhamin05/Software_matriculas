@@ -1,7 +1,8 @@
 ﻿//using comun;
 using Agenda.be;
+using Agenda.bll;
 using BLL;
-using DAL;
+//using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,15 +18,25 @@ namespace WindowsFormsApp1
 {
     public partial class Form3 : Form
     {
+        private blAgenda agenda;
         public Form3()
         {
             InitializeComponent();
         }
 
+        private void Limpiar()
+        {
+            txtidp.Text = "";
+            txtide.Text = "";
+            txtNpension.Text = "";
+            txtMonto.Text = "";
+            txtFecha.Text = "";
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            var dalPensi = new dalPension();
-            var perComun = dalPensi.seleccionarPension((int)txtidp.Value);
+            //var dalPensi = new dalPension();
+            var perComun = agenda.seleccionarPension((int)txtidp.Value);
             if (perComun != null)
             {
                 txtide.Value = perComun.id_estudiante;
@@ -46,7 +57,7 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEPencion();
-                var dalPensi = new dalPension();
+                //var dalPensi = new dalPension();
                 perComun.id_pensiones = (int)txtidp.Value;
                 perComun.id_estudiante = (int)txtide.Value;
                 perComun.n_pension = (int)txtNpension.Value;
@@ -55,12 +66,12 @@ namespace WindowsFormsApp1
 
                 //MessageBox.Show(perComun.ToString());
                 //dalPensi.insertarPension(perComun);
-                if (!dalPensi.insertarPension(perComun))
+                if (!agenda.insertarPension(perComun))
                     MessageBox.Show("No se pudo registrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Registrado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Poner para que se limpie los campos
+                    Limpiar();
                 }
             }
         }
@@ -73,7 +84,7 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEPencion();
-                var dalPensi = new dalPension();
+                //var dalPensi = new dalPension();
                 perComun.id_pensiones = (int)txtidp.Value;
                 perComun.id_estudiante = (int)txtide.Value;
                 perComun.n_pension = (int)txtNpension.Value;
@@ -82,12 +93,12 @@ namespace WindowsFormsApp1
 
                 //MessageBox.Show(perComun.ToString());
                 //dalPensi.actualizarPension(perComun);
-                if (!dalPensi.actualizarPension(perComun))
+                if (!agenda.actualizarPension(perComun))
                     MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Actualizado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //poner para que se limien los campos
+                    Limpiar();
                 }
             }
         }
@@ -95,15 +106,66 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             //logica de negocio
-            if ((int)txtidp.Value == 1)
+            var resultado = agenda.eliminarPension((int)txtidp.Value);
+            if (resultado)
                 MessageBox.Show("No se puede eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                var dalPensi = new dalPension();
-                dalPensi.eliminarPension((int)txtidp.Value);
+                
+                //dalPensi.eliminarPension((int)txtidp.Value);
                 MessageBox.Show("Estudiante eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //Poner para que se limpie los campos
+                Limpiar();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMonto_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNpension_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtide_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtidp_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

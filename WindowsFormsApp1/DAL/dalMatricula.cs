@@ -1,5 +1,6 @@
 ﻿//using comun;
 using Agenda.be;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,6 +86,21 @@ namespace DAL
                     return false;
                 }
             }
+        }
+
+        public List<BEMatricula> seleccionarMatriculas()
+        {
+            var bd = new BD_MATRICULAEntities();
+            var resultado = new List<BEMatricula>();
+            foreach (var item in bd.MATRICULA)
+            {
+                var matricula = seleccionarMatricula(item.id_matricula);
+                if (matricula != null)
+                {
+                    resultado.Add(matricula);
+                }
+            }
+            return resultado;
         }
     }
 }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NuGet.Frameworks, Version=4.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\NuGet.Frameworks.4.6.4\lib\net46\NuGet.Frameworks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -111,6 +114,7 @@
     <None Include="BD_MATRICULADataSet.xss">
       <DependentUpon>BD_MATRICULADataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,9 +130,9 @@
       <Project>{531433f7-19d5-423e-879d-bcca640ff17f}</Project>
       <Name>Agenda.be</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL\Agenda.dal.csproj">
-      <Project>{ce7930a4-5fa2-4c5e-91f8-2834d8a35ac0}</Project>
-      <Name>Agenda.dal</Name>
+    <ProjectReference Include="..\Agenda.bll\Agenda.bll.csproj">
+      <Project>{7d45a393-0770-4bd1-8039-bdfc525720c1}</Project>
+      <Name>Agenda.bll</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

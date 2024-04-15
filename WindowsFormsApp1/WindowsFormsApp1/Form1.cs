@@ -1,7 +1,7 @@
 ﻿using Agenda.be;
+using Agenda.bll;
 using BLL;
 //using comun;
-using DAL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,15 +16,25 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private blAgenda agenda;
         public Form1()
         {
             InitializeComponent();
+            agenda = new blAgenda();
+        }
+
+        private void Limpiar()
+        {
+            txtDNI.Text = "";
+            txtNombres.Text = "";
+            txtApellidos.Text = "";
+            txtTelefono.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var dalEstu = new dalEstudiantes();
-            var per = dalEstu.seleccionarEstudiante((int)txtID.Value);
+            //var dalEstu = new dalEstudiantes();
+            var per = agenda.seleccionarEstudiante((int)txtID.Value);
             if (per != null)
             {
                 txtDNI.Text = per.dni;
@@ -47,7 +57,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No puedes registrar sin número telefónico", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else {
                 var per = new BEEstudiantes();
-                var dalEstu = new dalEstudiantes();
+                //var dalEstu = new dalEstudiantes();
                 per.id = (int)txtID.Value;
                 per.dni = txtDNI.Text;
                 per.nombres = txtNombres.Text;
@@ -57,12 +67,13 @@ namespace WindowsFormsApp1
 
                 //MessageBox.Show(per.ToString());
                 //dalEstu.insertarEstudiante(per);
-                if (!dalEstu.insertarEstudiante(per))
+                if (!agenda.insertarEstudiante(per))
                     MessageBox.Show("No se pudo registrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Registrado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //Poner para que se limpie los campos
+                    ListMatricula.DataSource = agenda.seleccionarEstudiantes();
                 }
             }
         }
@@ -74,7 +85,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No se puede modificar a este estudiante", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else {
                 var per = new BEEstudiantes();
-                var dalEstu = new dalEstudiantes();
+                //var dalEstu = new dalEstudiantes();
                 per.id = (int)txtID.Value;
                 per.dni = txtDNI.Text;
                 per.nombres = txtNombres.Text;
@@ -90,12 +101,13 @@ namespace WindowsFormsApp1
                 //MessageBox.Show(per.ToString());
                 //dalEstu.actualizarEstudiante(per);
 
-                if (!dalEstu.actualizarEstudiante(per))
+                if (!agenda.actualizarEstudiante(per))
                     MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Actualizado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //poner para que se limien los campos
+                    ListMatricula.DataSource = agenda.seleccionarEstudiantes();
                 }
             }
         }
@@ -103,13 +115,17 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             //logica de negocio
-            if ((int)txtID.Value == 1)
-                MessageBox.Show("No se puede eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            var resultado = agenda.eliminarEstudiante((int)txtID.Value);
+            if (!resultado)
+                MessageBox.Show("No se puede eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else { 
-                var dalEstu = new dalEstudiantes();
-                dalEstu.eliminarEstudiante((int)txtID.Value);
+                //var dalEstu = new dalEstudiantes();
+                //agenda.eliminarEstudiante((int)txtID.Value);
                 MessageBox.Show("Estudiante eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ListMatricula.DataSource = dalEstu.seleccionarEstudiantes();
+
+                Limpiar();
+
+                ListMatricula.DataSource = agenda.seleccionarEstudiantes();
                 //Poner para que se limpie los campos
             }
         }

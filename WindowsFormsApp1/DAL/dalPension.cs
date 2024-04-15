@@ -1,5 +1,6 @@
 ﻿//using comun;
 using Agenda.be;
+using BLL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -85,6 +86,21 @@ namespace DAL
                     return false;
                 }
             }
+        }
+
+        public List<BEPencion> seleccionarPensiones()
+        {
+            var bd = new BD_MATRICULAEntities();
+            var resultado = new List<BEPencion>();
+            foreach (var item in bd.PENSION)
+            {
+                var pension = seleccionarPension(item.id_pensiones);
+                if (pension != null)
+                {
+                    resultado.Add(pension);
+                }
+            }
+            return resultado;
         }
     }
 }

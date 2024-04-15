@@ -96,6 +96,12 @@ namespace Agenda.bll
             return dataAccess.seleccionarMatricula(pIdMatri);
         }
 
+        /*public List<BEMatricula> seleccionarMatriculas()
+        {
+            var dataAccess = new dalMatricula();
+            return dataAccess.seleccionarMatriculas();
+        }*/
+
         //----------------------------------------------------------------
         //---------------------------Pensiones----------------------------
         //----------------------------------------------------------------
@@ -137,5 +143,11 @@ namespace Agenda.bll
             var dataAccess = new dalPension();
             return dataAccess.seleccionarPension(pIdPen);
         }
+
+        /*public List<BEPencion> seleccionarPensiones()
+        {
+            var dataAccess = new dalPension();
+            return dataAccess.seleccionarPensiones();
+        }*/
     }
 }

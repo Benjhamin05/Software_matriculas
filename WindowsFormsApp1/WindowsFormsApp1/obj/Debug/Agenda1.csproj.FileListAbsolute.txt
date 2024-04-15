@@ -19,3 +19,7 @@ C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\Window
 C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\EntityFramework.xml
 C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\Agenda1.csproj.Up2Date
 C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Agenda.bll.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\NuGet.Frameworks.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Agenda.bll.pdb
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\NuGet.Frameworks.xml
