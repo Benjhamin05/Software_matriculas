@@ -1,12 +1,51 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\UTEA\\CICLO_VII\\Ingenier\u00EDa_de_Software_II\\Proyecto\\Software_matriculas\\WindowsFormsApp1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE2394D8-A4C9-4FD4-972E-CAD53082931C}|Agenda.DataContracts\\Agenda.DataContracts.csproj|c:\\utea\\ciclo_vii\\ingenier\u00EDa_de_software_ii\\proyecto\\software_matriculas\\windowsformsapp1\\agenda.datacontracts\\dcestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE2394D8-A4C9-4FD4-972E-CAD53082931C}|Agenda.DataContracts\\Agenda.DataContracts.csproj|solutionrelative:agenda.datacontracts\\dcestudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 705,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DCEstudiante.cs",
+              "DocumentMoniker": "C:\\UTEA\\CICLO_VII\\Ingenier\u00EDa_de_Software_II\\Proyecto\\Software_matriculas\\WindowsFormsApp1\\Agenda.DataContracts\\DCEstudiante.cs",
+              "RelativeDocumentMoniker": "Agenda.DataContracts\\DCEstudiante.cs",
+              "ToolTip": "C:\\UTEA\\CICLO_VII\\Ingenier\u00EDa_de_Software_II\\Proyecto\\Software_matriculas\\WindowsFormsApp1\\Agenda.DataContracts\\DCEstudiante.cs",
+              "RelativeToolTip": "Agenda.DataContracts\\DCEstudiante.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowEkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-16T05:43:18.839Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1019,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

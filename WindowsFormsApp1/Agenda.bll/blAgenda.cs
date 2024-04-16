@@ -82,11 +82,11 @@ namespace Agenda.bll
 
         public bool eliminarMatricula(int pIdMatri)
         {
-            var dataAccess = new dalEstudiantes();
+            var dataAccess = new dalMatricula();
             // aquí la lógica de negocio
             if (pIdMatri == 1)
                 return false;
-            dataAccess.eliminarEstudiante(pIdMatri);
+            dataAccess.eliminarMatricula(pIdMatri);
             return true;
         }
 

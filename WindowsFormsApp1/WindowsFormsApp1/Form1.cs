@@ -33,7 +33,6 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //var dalEstu = new dalEstudiantes();
             var per = agenda.seleccionarEstudiante((int)txtID.Value);
             if (per != null)
             {
@@ -57,7 +56,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No puedes registrar sin número telefónico", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else {
                 var per = new BEEstudiantes();
-                //var dalEstu = new dalEstudiantes();
                 per.id = (int)txtID.Value;
                 per.dni = txtDNI.Text;
                 per.nombres = txtNombres.Text;
@@ -65,14 +63,12 @@ namespace WindowsFormsApp1
                 per.telefono = txtTelefono.Text;
                 per.matriculas = new List<BEMatricula>();
 
-                //MessageBox.Show(per.ToString());
-                //dalEstu.insertarEstudiante(per);
                 if (!agenda.insertarEstudiante(per))
                     MessageBox.Show("No se pudo registrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Registrado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //Poner para que se limpie los campos
+                    Limpiar();
                     ListMatricula.DataSource = agenda.seleccionarEstudiantes();
                 }
             }
@@ -85,32 +81,39 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No se puede modificar a este estudiante", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else {
                 var per = new BEEstudiantes();
-                //var dalEstu = new dalEstudiantes();
                 per.id = (int)txtID.Value;
                 per.dni = txtDNI.Text;
                 per.nombres = txtNombres.Text;
                 per.apellidos = txtApellidos.Text;
                 per.telefono = txtTelefono.Text;
 
-                /*per.matriculas = new List<BEMatricula>();
-                foreach (var item in (List<BEMatricula>())listBox1.DataSource)
-                {
-                    per.matriculas.Add(item);
-                }*/
-
-                //MessageBox.Show(per.ToString());
-                //dalEstu.actualizarEstudiante(per);
-
                 if (!agenda.actualizarEstudiante(per))
                     MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     MessageBox.Show("Actualizado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //poner para que se limien los campos
+                    Limpiar();
                     ListMatricula.DataSource = agenda.seleccionarEstudiantes();
                 }
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private void button4_Click(object sender, EventArgs e)
         {

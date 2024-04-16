@@ -23,20 +23,7 @@ namespace DAL
                     per.nombres = pEstudiante.nombres;
                     per.apellidos = pEstudiante.apellidos;
                     per.telefono = pEstudiante.telefono;
-                    //bd.ESTUDIANTE.Add(per);
-                    //bd.SaveChanges();
-                    //return true;
                 }
-                /*foreach (var item in pEstudiante.matriculas)
-                {
-                    var mat = new MATRICULA() { id_matricula = item.idMatricula, id_estudiante = item.idEstudiante, nivel = item.nivel, monto_matricula = item.monto_m, fecha_m = item.fecha_m };
-                    per.MATRICULA.Add(mat);
-                }
-                foreach (var item in pEstudiante.pensiones)
-                {
-                    var pens = new PENSION() { id_pensiones = item.id_pensiones, id_estudiante = item.id_estudiante, n_pension = item.n_pension, monto = item.monto, fecha_p = item.fecha_p };
-                    per.PENSION.Add(pens);
-                }*/
                 bd.ESTUDIANTE.Add(per);
                 bd.SaveChanges();
                 var estudianteInsertado = seleccionarEstudiante(per.id_estudiante);
@@ -48,28 +35,25 @@ namespace DAL
         {
             using (var bd = new BD_MATRICULAEntities())
             {
-                var estudiante = bd.ESTUDIANTE.First(s => s.id_estudiante == pEstudiantes.id);
-                estudiante.dni = pEstudiantes.dni;
-                estudiante.nombres = pEstudiantes.nombres;
-                estudiante.apellidos = pEstudiantes.apellidos;
-                estudiante.telefono = pEstudiantes.telefono;
-                //bd.SaveChanges();
-                if (estudiante.MATRICULA != null)
+                try
                 {
-                    estudiante.MATRICULA.Clear();
-                    var estudianteInsertado = seleccionarEstudiante(estudiante.id_estudiante);
-                    /*foreach (var mat in pEstudiantes.matriculas)
+                    var estudiante = bd.ESTUDIANTE.First(s => s.id_estudiante == pEstudiantes.id);
+                    estudiante.dni = pEstudiantes.dni;
+                    estudiante.nombres = pEstudiantes.nombres;
+                    estudiante.apellidos = pEstudiantes.apellidos;
+                    estudiante.telefono = pEstudiantes.telefono;
+
+                    if (estudiante.MATRICULA != null)
                     {
-                        var matr = new MATRICULA() { id_matricula = mat.idMatricula, id_estudiante = mat.idEstudiante, nivel = mat.nivel, monto_matricula = mat.monto_m, fecha_m = mat.fecha_m };
-                        estudiante.MATRICULA.Add(matr);
+                        estudiante.MATRICULA.Clear();
                     }
-                    foreach (var mat in pEstudiantes.pensiones)
-                    {
-                        var pens = new PENSION() { id_pensiones = mat.id_pensiones, id_estudiante = mat.id_estudiante, n_pension = mat.n_pension, monto = mat.monto, fecha_p = mat.fecha_p };
-                        estudiante.PENSION.Add(pens);
-                    }*/
+                    bd.SaveChanges();
+                    return true;
                 }
-                return true;               
+                catch (Exception ex)
+                {
+                    return false;
+                }
             }
         }
 
@@ -88,7 +72,13 @@ namespace DAL
         {
             using (var bd = new BD_MATRICULAEntities())
             {
-                var pEstudiante = bd.ESTUDIANTE.First(s => s.id_estudiante == ID);
+                var pEstudiante = bd.ESTUDIANTE.FirstOrDefault(s => s.id_estudiante == ID);
+
+                if (pEstudiante == null)
+                {
+                    return null;
+                }
+
                 var per = new BEEstudiantes();
                 per.id = pEstudiante.id_estudiante;
                 per.dni = pEstudiante.dni;
@@ -97,6 +87,7 @@ namespace DAL
                 per.telefono = pEstudiante.telefono;
                 per.matriculas = new List<BEMatricula>();
                 per.pensiones = new List<BEPencion>();
+
                 if (pEstudiante.MATRICULA != null)
                 {
 

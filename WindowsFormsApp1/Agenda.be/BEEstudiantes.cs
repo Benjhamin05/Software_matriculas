@@ -17,11 +17,5 @@ namespace BLL
 
         public List<BEMatricula> matriculas { get; set; }
         public List<BEPencion> pensiones { get; set; }
-
-        /*public override string ToString()
-        {
-            return string.Format("Estudiante (id={0} dni={1}, nombres={2}, apellidos={3}, telefono={4})",
-                                  id, dni, nombres, apellidos, telefono);
-        }*/
     }
 }

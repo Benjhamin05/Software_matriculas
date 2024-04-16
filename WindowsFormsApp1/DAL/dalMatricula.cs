@@ -16,13 +16,20 @@ namespace DAL
             using (var bd = new BD_MATRICULAEntities())
             {
                 var per = new BEMatricula();
-                var pMatricula = bd.MATRICULA.First(s => s.id_matricula == ID_M);
-                per.idMatricula = pMatricula.id_matricula;
-                per.idEstudiante = pMatricula.id_estudiante;
-                per.nivel = pMatricula.nivel;
-                per.monto_m = pMatricula.monto_matricula;
-                per.fecha_m = pMatricula.fecha_m;
-                return per;
+                try
+                {
+                    var pMatricula = bd.MATRICULA.First(s => s.id_matricula == ID_M);
+                    per.idMatricula = pMatricula.id_matricula;
+                    per.idEstudiante = pMatricula.id_estudiante;
+                    per.nivel = pMatricula.nivel;
+                    per.monto_m = pMatricula.monto_matricula;
+                    per.fecha_m = pMatricula.fecha_m;
+                    return per;
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
             }
         }
 

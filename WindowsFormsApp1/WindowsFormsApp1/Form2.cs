@@ -63,15 +63,12 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEMatricula();
-                //var dalMatri = new dalMatricula();
                 perComun.idMatricula = (int)txtIdMatri.Value;
                 perComun.idEstudiante = (int)txtIdAlumno.Value;
                 perComun.nivel = txtNivel.Text;
                 perComun.monto_m = (decimal)txtMonto.Value;
                 perComun.fecha_m = DateTime.Parse(txtFecha.Text);
 
-                //MessageBox.Show(perComun.ToString());
-                //dalMatri.registrarMatricula(perComun);
                 if (!agenda.insertarMatricula(perComun))
                     MessageBox.Show("No se pudo registrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -90,8 +87,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("No se puede eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                //var dalMatri = new dalMatricula();
-                //dalMatri.eliminarMatricula((int)txtIdMatri.Value);
                 MessageBox.Show("Matrícula eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }
@@ -105,15 +100,12 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEMatricula();
-                //var dalMatri = new dalMatricula();
                 perComun.idMatricula = (int)txtIdMatri.Value;
-                perComun.idEstudiante = (int)txtIdMatri.Value;
+                perComun.idEstudiante = (int)txtIdAlumno.Value;
                 perComun.nivel = txtNivel.Text;
                 perComun.monto_m = (decimal)txtMonto.Value;
                 perComun.fecha_m = DateTime.Parse(txtFecha.Text);
 
-                //MessageBox.Show(perComun.ToString());
-                //dalEstu.actualizarMatricula(perComun);
                 if (!agenda.actualizarMatricula(perComun))
                     MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else

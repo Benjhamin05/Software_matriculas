@@ -23,3 +23,6 @@ C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\Window
 C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\NuGet.Frameworks.dll
 C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Agenda.bll.pdb
 C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\NuGet.Frameworks.xml
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\UTEA\CICLO_VII\Ingeniería_de_Software_II\Proyecto\Software_matriculas\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Microsoft.ReportViewer.WinForms.xml

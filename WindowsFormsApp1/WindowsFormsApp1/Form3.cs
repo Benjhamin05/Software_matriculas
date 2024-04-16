@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
         public Form3()
         {
             InitializeComponent();
+            agenda = new blAgenda();
         }
 
         private void Limpiar()
@@ -35,7 +36,6 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //var dalPensi = new dalPension();
             var perComun = agenda.seleccionarPension((int)txtidp.Value);
             if (perComun != null)
             {
@@ -46,7 +46,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("NO hay registro de pensión", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No hay registro de pensión", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -57,15 +57,12 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEPencion();
-                //var dalPensi = new dalPension();
                 perComun.id_pensiones = (int)txtidp.Value;
                 perComun.id_estudiante = (int)txtide.Value;
                 perComun.n_pension = (int)txtNpension.Value;
                 perComun.monto = txtMonto.Value;
                 perComun.fecha_p = DateTime.Parse(txtFecha.Text);
 
-                //MessageBox.Show(perComun.ToString());
-                //dalPensi.insertarPension(perComun);
                 if (!agenda.insertarPension(perComun))
                     MessageBox.Show("No se pudo registrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -84,15 +81,12 @@ namespace WindowsFormsApp1
             else
             {
                 var perComun = new BEPencion();
-                //var dalPensi = new dalPension();
                 perComun.id_pensiones = (int)txtidp.Value;
                 perComun.id_estudiante = (int)txtide.Value;
                 perComun.n_pension = (int)txtNpension.Value;
                 perComun.monto = (decimal)txtMonto.Value;
                 perComun.fecha_p = DateTime.Parse(txtFecha.Text);
 
-                //MessageBox.Show(perComun.ToString());
-                //dalPensi.actualizarPension(perComun);
                 if (!agenda.actualizarPension(perComun))
                     MessageBox.Show("No se pudo actualizar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
@@ -107,12 +101,10 @@ namespace WindowsFormsApp1
         {
             //logica de negocio
             var resultado = agenda.eliminarPension((int)txtidp.Value);
-            if (resultado)
+            if (!resultado)
                 MessageBox.Show("No se puede eliminar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                
-                //dalPensi.eliminarPension((int)txtidp.Value);
                 MessageBox.Show("Estudiante eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }
